@@ -1,0 +1,80 @@
+.countdownHolder{
+	width:538px;
+	margin:0 auto;
+	font: 40px/1.5 'Open Sans Condensed',sans-serif;
+	text-align:center;
+	letter-spacing:-3px;
+}
+
+@font-face {
+    font-family: 4077th; /* имя шрифта для CSS правил */
+    src: local("4077th"), /* проверяем наличие шрифта в ОС пользователя */
+         url(4077TH.ttf); /* если шрифт не установлен, тогда загружаем его по указанному пути */
+  }
+
+.position{
+	display: inline-block;
+	height: 1.6em;
+	overflow: hidden;
+	position: relative;
+	width: 1.05em;
+}
+
+.digit{
+	position:absolute;
+	display:block;
+	width:1em;
+	background-color:257311;
+	border-radius:0.2em;
+	text-align:center;
+	color:#000;
+	letter-spacing:-1px;
+	font-family: 4077th, arial;
+	border:1px solid #ccc;
+	box-shadow: 1px 1px 1px rgba(4, 4, 4, 0.35);
+    font-weight: bold;
+	
+}
+
+.digit.static{
+	border: 1px solid rgba(0, 0, 0, 0.47);
+	}
+
+/**
+ * Вы можете использовать данные классы для скрытия
+ * частей счетчика, которые не нужны.
+ */
+
+.countDays{ /* display:none !important;*/ }
+.countDiv0{ /* display:none !important;*/ }
+.countHours{}
+.countDiv1{}
+.countMinutes{}
+.countDiv2{}
+.countSeconds{}
+
+
+.countDiv{
+	display:inline-block;
+	width:16px;
+	height:1.6em;
+	position:relative;
+}
+
+.countDiv:before,
+.countDiv:after{
+	position:absolute;
+	width:5px;
+	height:5px;
+	background-color:#444;
+	border-radius:50%;
+	left:50%;
+	margin-left:-3px;
+	top:0.5em;
+	box-shadow:1px 1px 1px rgba(4, 4, 4, 0.5);
+	content:'';
+}
+
+.countDiv:after{
+	top:0.9em;
+}
